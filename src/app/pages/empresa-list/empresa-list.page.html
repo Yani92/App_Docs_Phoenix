@@ -26,10 +26,10 @@
                   <h6>{{empresa.value.direccion}}</h6>
               </ion-label>
               <ion-label>
-                  <h6>{{persona.value.telefono}}</h6>
-                  <h6>{{persona.value.celular}}</h6>
-                  <h6>{{persona.value.contacto}}</h6>
-                  <h6>{{persona.value.cargo}}</h6>
+                  <h6>{{empresa.value.telefono}}</h6>
+                  <h6>{{empresa.value.celular}}</h6>
+                  <h6>{{empresa.value.contacto}}</h6>
+                  <h6>{{empresa.value.cargo}}</h6>
               </ion-label>
           </ion-item>
 
@@ -48,7 +48,7 @@
       </ion-fab-button>
   </ion-fab>
 
-  <ng-template [ngIf]="empresa.size == 0">
+  <ng-template [ngIf]="empresas.size == 0">
       <ion-card>
           <ion-card-content>
               <h4 class="ion-text-center">No existen empresas registradas, por favor ingrese empresas.</h4>

@@ -15,7 +15,7 @@ export class EmpresaFormPage implements OnInit {
 
 
   public empresa: Empresa ={
-    
+    urlFoto: './assets/img/persona-icon.png'
   };
 
   public key: string
@@ -48,7 +48,7 @@ export class EmpresaFormPage implements OnInit {
 
     const imagen = await Camera.getPhoto(options);
 
-    //this.empresa.urlFoto = imagen.webPath;
+    this.empresa.urlFoto = imagen.webPath;
   }
 
   guardar(){

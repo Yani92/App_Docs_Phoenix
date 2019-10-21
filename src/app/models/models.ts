@@ -8,4 +8,5 @@ export interface Empresa {
     contacto?: string
     cargo?: string
     representanteLegal?: string
+    urlFoto?: string
 }
