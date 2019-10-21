@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../services/login.service';
+import { User } from '../../models/models';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  public user: User = {};
 
-  ngOnInit() {
+  constructor(
+    private srv: LoginService,
+    private router: Router,
+  ) {
+  }
+
+  async ngOnInit() {
+
+  }
+
+
+  async onSubmitTemplate() {
+
+    this.user = await this.srv.login(this.user.username, this.user.password);
+    this.router.navigate(['home']);
+
+
   }
 
 }
