@@ -48,14 +48,14 @@ export class EmpresaFormPage implements OnInit {
 
     const imagen = await Camera.getPhoto(options);
 
-    this.empresa.urlFoto = imagen.webPath;
+    //this.empresa.urlFoto = imagen.webPath;
   }
 
   guardar(){
     if(this.key){
 
     }else{
-      this.srv.setEmpresa(this.persona)
+      this.srv.setEmpresa(this.empresa)
     }
 
     this.router.navigate(['/empresa-list'])
