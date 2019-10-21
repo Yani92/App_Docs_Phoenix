@@ -1,18 +1,46 @@
 <ion-header>
   <ion-toolbar>
-      <ion-title>
-          Inicio
-      </ion-title>
+
+    <ion-buttons slot="start">
+
+
+      <ion-avatar>
+        <img [src]="'data:image/png;base64,'+user.persona.Foto" />
+      </ion-avatar>
+      <ion-label>
+        <h6>{{user.persona.primerNombre}} {{user.persona.primerApellido}}</h6>
+      </ion-label>
+
+
+
+    </ion-buttons>
+
+    <ion-title>
+      Inicio
+    </ion-title>
+
+
+
+    <ion-buttons slot="end">
+
+      <ion-button (click)="logOut()">
+        <ion-icon slot="end" name="ios-log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+
+
+
   <ion-list inset="true" lines="full">
 
-      <ion-item button routerLink="/empresa-list">
-          <ion-label>Empresas</ion-label>
-      </ion-item>
+    <ion-item button routerLink="/empresa-list">
+      <ion-label>Empresas</ion-label>
+    </ion-item>
 
   </ion-list>
 

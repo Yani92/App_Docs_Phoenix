@@ -14,7 +14,7 @@ const { Camera, Toast } = Plugins
 export class EmpresaFormPage implements OnInit {
 
 
-  public empresa: Empresa ={
+  public empresa: Empresa = {
     urlFoto: './assets/img/persona-icon.png'
   };
 
@@ -30,11 +30,11 @@ export class EmpresaFormPage implements OnInit {
 
   ngOnInit() {
 
-    this.key = this.route.snapshot.params ['key']
+    this.key = this.route.snapshot.params['key']
 
-    if (this.key){
+    if (this.key) {
       this.titulo = "Editar Empresa"
-      this.empresa = this.srv.getEmpresaBy (this.key)
+      this.empresa = this.srv.getEmpresaBy(this.key)
     }
   }
 
@@ -51,10 +51,10 @@ export class EmpresaFormPage implements OnInit {
     this.empresa.urlFoto = imagen.webPath;
   }
 
-  guardar(){
-    if(this.key){
+  guardar() {
+    if (this.key) {
 
-    }else{
+    } else {
       this.srv.setEmpresa(this.empresa)
     }
 
